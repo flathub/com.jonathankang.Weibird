@@ -39,6 +39,12 @@
                     "url" : "https://github.com/JonathanKang/weibird/archive/weibird-0.1.2.tar.gz",
                     "sha256" : "d14e3fa611b93e34f91b87b0fd77ae13b34da899fd7718baffd423917e9f3712"
                 }
+            ],
+            "post-install": [
+                "for size in 64 128 256 512; do
+                    rsvg-convert -w $size -h $size -f png -o $size.png /app/share/icons/hicolor/scalable/apps/com.jonathankang.Weibird.svg
+                    install -Dm644 $size.png /app/share/icons/hicolor/${size}x${size}/apps/com.jonathankang.Weibird.png
+                  done"
             ]
         }
     ]
