@@ -36,8 +36,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://github.com/JonathanKang/weibird/archive/weibird-0.1.4.tar.gz",
-                    "sha256" : "de1fabfed296d8f96795868d0cab9c0a31467fab926de5faeb641cd1f78cc045"
+                    "url" : "https://github.com/JonathanKang/weibird/archive/weibird-0.1.5.tar.gz",
+                    "sha256" : "2cb5e9d976440e93b6d541012e0af6f813802c3c1d7f62316d07fecb7586b894"
                 }
             ],
             "post-install": [
