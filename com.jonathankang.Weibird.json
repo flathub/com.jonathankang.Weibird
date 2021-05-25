@@ -1,7 +1,7 @@
 {
     "app-id" : "com.jonathankang.Weibird",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.32",
+    "runtime-version" : "40",
     "sdk" : "org.gnome.Sdk",
     "command" : "weibird",
     "finish-args" : [
@@ -10,16 +10,14 @@
         "--share=network",
         "--socket=wayland",
         "--socket=x11",
-        "--filesystem=xdg-run/dconf",
-        "--filesystem=~/.config/dconf:ro",
-        "--talk-name=ca.desrt.dconf",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+        "--metadata=X-DConf=migrate-path=/com/jonathankang/Weibird/"
     ],
     "cleanup" : [
         "/include",
         "/lib/pkgconfig"
     ],
     "modules" : [
+        "shared-modules/python2.7/python-2.7.json",
         {
             "name" : "librest",
             "sources" : [
@@ -38,6 +36,10 @@
                     "type" : "archive",
                     "url" : "https://github.com/JonathanKang/weibird/archive/weibird-0.1.9.tar.gz",
                     "sha256" : "44f54faf51caac5003bc312381c7fcef08a9e22a932d6e2a67cf21d1fc02e15e"
+                },
+                {
+                    "type" : "patch",
+                    "path" : "weibird-extern.patch"
                 }
             ],
             "post-install": [

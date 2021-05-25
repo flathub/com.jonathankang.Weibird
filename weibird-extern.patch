@@ -1,0 +1,26 @@
+diff --git a/src/wb-util.c b/src/wb-util.c
+index d6ee369..1b36fbe 100644
+--- a/src/wb-util.c
++++ b/src/wb-util.c
+@@ -23,6 +23,8 @@
+ #include "wb-timeline-list.h"
+ #include "wb-util.h"
+ 
++SoupSession *SOUPSESSION;
++
+ static const gchar SETTINGS_SCHEMA[] = "com.jonathankang.Weibird";
+ static const gchar ACCESS_TOKEN[] = "access-token";
+ static const gchar APP_KEY[] = "app-key";
+diff --git a/src/wb-util.h b/src/wb-util.h
+index b4479f8..afa8168 100644
+--- a/src/wb-util.h
++++ b/src/wb-util.h
+@@ -30,7 +30,7 @@ G_BEGIN_DECLS
+ #define MAX_WIDTH 1000
+ #define MAX_HEIGHT 800
+ 
+-SoupSession *SOUPSESSION;
++extern SoupSession *SOUPSESSION;
+ 
+ void wb_util_init_soup_session (void);
+ void wb_util_finalize_soup_session (void);
