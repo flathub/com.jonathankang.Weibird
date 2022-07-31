@@ -1,7 +1,7 @@
 {
     "app-id" : "com.jonathankang.Weibird",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "40",
+    "runtime-version" : "42",
     "sdk" : "org.gnome.Sdk",
     "command" : "weibird",
     "finish-args" : [
@@ -9,7 +9,7 @@
         "--share=ipc",
         "--share=network",
         "--socket=wayland",
-        "--socket=x11",
+        "--socket=fallback-x11",
         "--metadata=X-DConf=migrate-path=/com/jonathankang/Weibird/"
     ],
     "cleanup" : [
@@ -41,12 +41,6 @@
                     "type" : "patch",
                     "path" : "weibird-extern.patch"
                 }
-            ],
-            "post-install": [
-                "for size in 64 128 256 512; do
-                    rsvg-convert -w $size -h $size -f png -o $size.png /app/share/icons/hicolor/scalable/apps/com.jonathankang.Weibird.svg
-                    install -Dm644 $size.png /app/share/icons/hicolor/${size}x${size}/apps/com.jonathankang.Weibird.png
-                  done"
             ]
         }
     ]
