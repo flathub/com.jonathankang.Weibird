@@ -1,0 +1,10 @@
+--- weibird/data/com.jonathankang.Weibird.appdata.xml	2019-08-06 14:08:57.000000000 +0530
++++ weibird/data/com.jonathankang.Weibird.appdata.xml	2024-01-30 19:20:07.533266753 +0530
+@@ -4,6 +4,7 @@
+   <id>com.jonathankang.Weibird</id>
+   <metadata_license>CC-BY-SA-3.0</metadata_license>
+   <project_license>GPL-3.0+</project_license>
++  <developer_name>Jonathan Kang</developer_name>
+   <name>Weibird</name>
+   <summary>Native GTK+ Weibo client</summary>
+   <description>

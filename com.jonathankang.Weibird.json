@@ -85,6 +85,10 @@
                 {
                     "type": "patch",
                     "path": "weibird-extern.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "appdata.patch"
                 }
             ]
         }
